@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    
+    
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"
+    integrity="sha512-4P0ZJ49OMXe3jXT+EsEaq82eNwFeyYL81LeHGzGcEhowFbTqeQ80q+NEkgsE8tHPs6aCqvi7U+XWliAjDmT5Lg=="
+    crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.js"
+      integrity="sha512-U2sgwrFhl+Tgx9iGH9h5Ba2WyIjyCes+D0prtIFw3a0V+/fkaeL5Cd/VjyPHno9kUPE1rnNhBGTyvtZsfJp0xg=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    
+    <meta charset="utf-8"/>
+    <script type="module" crossorigin src="/assets/index.e52ffdff.js"></script>
+    <link rel="stylesheet" href="/assets/index.5c899a85.css">
+  </head>
+
+  <body>
+    <div id="introPage" class="page Show">
+      <div id="introWrapper">
+
+        <div id="leftContent">
+          <div class="leftWrapper">
+            <div id="introItem1" class="introItem Show">
+              <img class="introGif" src="/assets/intro1Gif.c7322d15.gif">
+              <div class="introtext">
+                <div>One day the invasion</div>
+                <div>began from the unknown.</div>
+              </div>
+            </div>
+            <div id="introItem2" class="introItem Item">
+              <img class="introGif" src="/assets/intro2Gif.dbc4a9c1.gif">
+              <div class="introtext">
+                <div>While running away,</div>
+                <div>you found the only escape stairway.</div>
+              </div>
+            </div>
+            <div id="introItem3" class="introItem Item">
+              <img class="introGif" src="/assets/intro3Gif.50e24edb.gif">
+              <div class="introtext">
+                <div>Escape as fast as you can</div>
+                <div>But becareful,</div>
+                <div>You can only go DOWN the stairs</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        
+        <div id="rightContent">
+          <div id="signinPage" class="content Show">
+            <div class="pageWrapper">
+              <div class="titletextWrapper">
+                <div class="titletext">Welcome to</div>
+                <div class="titletext">Run Through Gravity!</div>
+              </div>
+              <div id="nameInput">
+                <div class="subtitletext">Email Address</div>
+                <input id="signinName" class="boxInput" type="text">
+              </div>
+              <div id="passwordInput">
+                <div class="subtitletext">Password</div>
+                <input type="password" id="signinPassword" class="boxInput">
+              </div>
+              <div id="signinButton" class="boxButton">
+                <div class="subtitletext white">Sign In</div>
+              </div>
+              <div class="linktextWrapper">
+                <div class="detailtext">Don't have an account?</div>
+                <div id="signupLink" class="linktext">Sign Up</div>
+              </div>
+            </div>
+          </div>
+  
+          <div id="signupPage" class="content Item">
+            <div class="pageWrapper">
+              <div class="titletextWrapper">
+                <div class="titletext">Sign Up to</div>
+                <div class="titletext">Run Through Gravity!</div>
+              </div>
+              <div id="nameInput">
+                <div class="subtitleWrapper">
+                  <div class="subtitletext">Username</div>
+                  <div class="noticetextWrapper">
+                    <img id="nameIcon" class="iconimg Item">
+                    <div id="nameNotice" class="noticetext"></div>
+                  </div>
+                </div>
+                <input id="signupName" class="boxInput" type="text">
+              </div>
+              <div id="emailInput">
+                <div class="subtitleWrapper">
+                  <div class="subtitletext">Email Address</div>
+                  <div class="noticetextWrapper">
+                    <img id="emailIcon" class="iconimg Item">
+                    <div id="emailNotice" class="noticetext"></div>
+                  </div>
+                </div>
+                <input id="signupEmail" class="boxInput" type="text">
+              </div>
+              <div id="passwordInput">
+                <div class="subtitleWrapper">
+                  <div class="subtitletext">Password</div>
+                  <div class="noticetextWrapper">
+                    <img id="passwordIcon" class="iconimg Item">
+                    <div id="passwordNotice" class="noticetext"></div>
+                  </div>
+                </div>
+                <input type="password" id="signupPassword" class="boxInput">
+              </div>
+              <div id="signupButton" class="boxButton Inactive">
+                <div class="subtitletext white">Sign Up</div>
+              </div>
+              <div class="linktextWrapper">
+                <div class="detailtext">Already have an account?</div>
+                <div id="signinLink" class="linktext">Sign In</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div id="mainPage" class="page Item">
+      <div id="mainWrapper">
+        <div id="title">
+          <img class="logoimg Show" src="/assets/titleLogo.2a5ae477.svg" >
+          <div id="playpageButton" class="tabButton middletext Selected ">Play</div>
+          <div id="mypageButton" class="tabButton middletext">My Page</div>
+        </div>
+        <div id="contents">
+          <div id="myContent" class="content Item">
+            <div class="contentWrapper">
+              <div class="myInfo">
+                <div id="myGreeting">
+                  <div class="bigtitletext">Hello,</div>
+                  <div id="myName" class="bigtitletext"></div>
+                </div>
+                <div id="myDetail">
+                  <div id="myCoinsWrapper" class="detailItem middletext"> 
+                    <div class="mydetailText">Your Coin</div>
+                    <div id="myCoins" class="Colored">100</div>
+                  </div>
+                  <div id="myScoreWrapper" class="detailItem middletext"> 
+                    <div class="mydetailText">You Score</div>
+                    <div id="myScore" class="Colored">100</div>
+                  </div>
+                </div>
+  
+              </div>
+              <div class="rankInfo">
+                <div class="titletext">Ranking</div>
+                <div class="rankWrapper">
+                  <div id="rankItems"></div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div id="playContent" class="content Show retry">
+            <div id="overPopup" class="popup Item">
+              <div class="popupWrapper">
+                <div class="popuptextWrapper popuptext">
+                  <div>Game Over</div>
+                </div>
+                <div class="scoreWrapper">
+                  <div class="scoreItem">
+                    <img class="scoreimg" src="/assets/scoreImg.7014e890.png">
+                    <div id="popupScore" class="scoretext">0</div>
+                  </div>
+                  <div class="scoreItem">
+                    <img class="scoreimg" src="/assets/coinImg.d1db0cd4.png">
+                    <div id="popupCoin" class="scoretext">0</div>
+                  </div>
+                </div>
+                <div class="buttons">
+                  <div id="retryButton" class="button middletext">Try again</div>
+                  <div id="rankButton" class="button middletext">See ranking</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+
+  </body>
+
+</html>
