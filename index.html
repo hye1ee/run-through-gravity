@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <script type="module" defer src="/main.js"></script>
     <script type="module" defer src="/sketch.js"></script>
     <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"
-    integrity="sha512-4P0ZJ49OMXe3jXT+EsEaq82eNwFeyYL81LeHGzGcEhowFbTqeQ80q+NEkgsE8tHPs6aCqvi7U+XWliAjDmT5Lg=="
-    crossorigin="anonymous"
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"
+      integrity="sha512-4P0ZJ49OMXe3jXT+EsEaq82eNwFeyYL81LeHGzGcEhowFbTqeQ80q+NEkgsE8tHPs6aCqvi7U+XWliAjDmT5Lg=="
+      crossorigin="anonymous"
     ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.js"
@@ -17,44 +16,41 @@
 
     <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <meta charset="utf-8"/>
+    <script src="https://canvasjs.com/src/assets/script/canvasjs.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="src/style/style.css" />
+    <meta charset="utf-8" />
   </head>
 
   <body>
     <div id="introPage" class="page Show">
       <div id="introWrapper">
-
         <div id="leftContent">
           <div class="leftWrapper">
             <div id="introItem1" class="introItem Show">
-              <img class="introGif" src="assets/intro1Gif.gif">
+              <img class="introGif" src="src/assets/intro1Gif.gif" />
               <div class="introtext">
                 <div>One day the invasion</div>
                 <div>began from the unknown.</div>
               </div>
             </div>
             <div id="introItem2" class="introItem Item">
-              <img class="introGif" src="assets/intro2Gif.gif">
+              <img class="introGif" src="src/assets/intro2Gif.gif" />
               <div class="introtext">
                 <div>While running away,</div>
                 <div>you found the only escape stairway.</div>
               </div>
             </div>
             <div id="introItem3" class="introItem Item">
-              <img class="introGif" src="assets/intro3Gif.gif">
+              <img class="introGif" src="src/assets/intro3Gif.gif" />
               <div class="introtext">
                 <div>Escape as fast as you can</div>
                 <div>But becareful,</div>
                 <div>You can only go DOWN the stairs</div>
               </div>
             </div>
-
           </div>
-
         </div>
-        
+
         <div id="rightContent">
           <div id="signinPage" class="content Show">
             <div class="pageWrapper">
@@ -64,11 +60,11 @@
               </div>
               <div id="nameInput">
                 <div class="subtitletext">Email Address</div>
-                <input id="signinName" class="boxInput" type="text">
+                <input id="signinName" class="boxInput" type="text" />
               </div>
               <div id="passwordInput">
                 <div class="subtitletext">Password</div>
-                <input type="password" id="signinPassword" class="boxInput">
+                <input type="password" id="signinPassword" class="boxInput" />
               </div>
               <div id="signinButton" class="boxButton">
                 <div class="subtitletext white">Sign In</div>
@@ -79,7 +75,7 @@
               </div>
             </div>
           </div>
-  
+
           <div id="signupPage" class="content Item">
             <div class="pageWrapper">
               <div class="titletextWrapper">
@@ -90,33 +86,33 @@
                 <div class="subtitleWrapper">
                   <div class="subtitletext">Username</div>
                   <div class="noticetextWrapper">
-                    <img id="nameIcon" class="iconimg Item">
+                    <img id="nameIcon" class="iconimg Item" />
                     <div id="nameNotice" class="noticetext"></div>
                   </div>
                 </div>
-                <input id="signupName" class="boxInput" type="text">
+                <input id="signupName" class="boxInput" type="text" />
               </div>
               <div id="emailInput">
                 <div class="subtitleWrapper">
                   <div class="subtitletext">Email Address</div>
                   <div class="noticetextWrapper">
-                    <img id="emailIcon" class="iconimg Item">
+                    <img id="emailIcon" class="iconimg Item" />
                     <div id="emailNotice" class="noticetext"></div>
                   </div>
                 </div>
-                <input id="signupEmail" class="boxInput" type="text">
+                <input id="signupEmail" class="boxInput" type="text" />
               </div>
               <div id="passwordInput">
                 <div class="subtitleWrapper">
                   <div class="subtitletext">Password</div>
                   <div class="noticetextWrapper">
-                    <img id="passwordIcon" class="iconimg Item">
+                    <img id="passwordIcon" class="iconimg Item" />
                     <div id="passwordNotice" class="noticetext"></div>
                   </div>
                 </div>
-                <input type="password" id="signupPassword" class="boxInput">
+                <input type="password" id="signupPassword" class="boxInput" />
               </div>
-              <div id="signupButton" class="boxButton Inactive">
+              <div id="signupButton" class="boxButton">
                 <div class="subtitletext white">Sign Up</div>
               </div>
               <div class="linktextWrapper">
@@ -126,16 +122,16 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
 
     <div id="mainPage" class="page Item">
       <div id="mainWrapper">
         <div id="title">
-          <img class="logoimg Show" src="assets/titleLogo.svg" >
-          <div id="playpageButton" class="tabButton middletext Selected ">Play</div>
+          <img class="logoimg Show" src="src/assets/titleLogo.svg" />
+          <div id="playpageButton" class="tabButton middletext Selected">
+            Play
+          </div>
           <div id="mypageButton" class="tabButton middletext">My Page</div>
         </div>
         <div id="contents">
@@ -147,16 +143,15 @@
                   <div id="myName" class="bigtitletext"></div>
                 </div>
                 <div id="myDetail">
-                  <div id="myCoinsWrapper" class="detailItem middletext"> 
+                  <div id="myCoinsWrapper" class="detailItem middletext">
                     <div class="mydetailText">Your Coin</div>
                     <div id="myCoins" class="Colored">100</div>
                   </div>
-                  <div id="myScoreWrapper" class="detailItem middletext"> 
+                  <div id="myScoreWrapper" class="detailItem middletext">
                     <div class="mydetailText">You Score</div>
                     <div id="myScore" class="Colored">100</div>
                   </div>
                 </div>
-  
               </div>
               <div class="rankInfo">
                 <div class="titletext">Ranking</div>
@@ -165,7 +160,6 @@
                 </div>
               </div>
             </div>
-            
           </div>
           <div id="playContent" class="content Show retry">
             <div id="overPopup" class="popup Item">
@@ -175,28 +169,27 @@
                 </div>
                 <div class="scoreWrapper">
                   <div class="scoreItem">
-                    <img class="scoreimg" src="assets/scoreImg.png">
+                    <img class="scoreimg" src="src/assets/scoreImg.png" />
                     <div id="popupScore" class="scoretext">0</div>
                   </div>
                   <div class="scoreItem">
-                    <img class="scoreimg" src="assets/coinImg.png">
+                    <img class="scoreimg" src="src/assets/coinImg.png" />
                     <div id="popupCoin" class="scoretext">0</div>
                   </div>
                 </div>
                 <div class="buttons">
-                  <div id="retryButton" class="button middletext">Try again</div>
-                  <div id="rankButton" class="button middletext">See ranking</div>
+                  <div id="retryButton" class="button middletext">
+                    Try again
+                  </div>
+                  <div id="rankButton" class="button middletext">
+                    See ranking
+                  </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
-
       </div>
-      
     </div>
-
   </body>
-
 </html>
