@@ -16,8 +16,8 @@ const signup = (auth, db) => {
   const passwordIcon = document.getElementById("passwordIcon");
   const passwordNotice = document.getElementById("passwordNotice");
 
-  const noIconUrl = "assets/noIcon.svg";
-  const yesIconUrl = "assets/yesIcon.svg";
+  const noIconUrl = "src/assets/noIcon.svg";
+  const yesIconUrl = "src/assets/yesIcon.svg";
 
   const updateUsernameValid = () => {
     nameIcon.className = "iconimg Show";
@@ -32,7 +32,7 @@ const signup = (auth, db) => {
     return false;
   };
 
-  const checkUsername = () => {
+  const checkUsername = async () => {
     const inputVal = signupName.value;
     if (inputVal === "") return updateUsernameInvalid();
 
@@ -68,7 +68,7 @@ const signup = (auth, db) => {
     return false;
   };
 
-  const checkEmail = () => {
+  const checkEmail = async () => {
     const inputVal = signupEmail.value;
     if (inputVal === "") return updateEmailInvalid();
 
@@ -104,7 +104,7 @@ const signup = (auth, db) => {
     return false;
   };
 
-  const checkPassword = () => {
+  const checkPassword = async () => {
     if (signupPassword.value.length >= 6) {
       return updatePasswordValid();
     } else {
@@ -112,11 +112,11 @@ const signup = (auth, db) => {
     }
   };
 
-  signupButton.onclick = () => {
+  signupButton.onclick = async () => {
     // Check validity
-    if (!checkUsername()) return;
-    if (!checkEmail()) return;
-    if (!checkPassword()) return;
+    if (!(await checkUsername())) return;
+    if (!(await checkEmail())) return;
+    if (!(await checkPassword())) return;
 
     // Add user authentication
     const name = signupName.value;
